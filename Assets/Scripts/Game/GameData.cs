@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class GameData
 {
-    public static int[,] level1MapData = new int[5, 5]
+    public static int[,] level1InitMapTypeData = new int[5, 5]
     {
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 },
@@ -26,7 +26,7 @@ public class GameData
     { 1, 1, 1, 1, 1 }
     };
 
-    public static int[,] level1PasswordData = new int[5, 5]
+    public static int[,] level1EndMapData = new int[5, 5]
     {
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 },

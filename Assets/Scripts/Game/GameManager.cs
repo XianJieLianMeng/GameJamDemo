@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Chessboard chessboard;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LevelManager.Instance.InitLevel(GameData.level1InitMapTypeData, GameData.level1InitMapData, GameData.level1EndMapData);
+        chessboard.Init();
     }
 }

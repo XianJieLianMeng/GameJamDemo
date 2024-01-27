@@ -6,7 +6,8 @@ public class Chessboard : MonoBehaviour
 
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private Transform cam;
-    private void Start()
+
+    public void Init()
     {
         InitializeChessboard(LevelManager.Instance.MapTypeData,LevelManager.Instance.MapData);
     }
