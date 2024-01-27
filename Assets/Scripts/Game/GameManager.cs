@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UniFramework.Event;
@@ -17,7 +18,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        var level = PlayerPrefs.GetInt("Level",0);
+        UniEvent.AddListener<EventDefine.EventGameStart>(OnEventGameStart);
+    }
+
+    private void OnEventGameStart(IEventMessage message)
+    {
+        if(message is EventDefine.EventGameStart)
+        {
+            GameStart();
+        }
+    }
+
+    private void GameStart()
+    {
+        var level = PlayerPrefs.GetInt("Level", 0);
 
         if (level >= 0 && level < GameDefine.MaxLevel)
         {
@@ -33,7 +47,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Invalid level index: " + level);
         }
         chessboard.Init();
-        timer = Timer.Register(20f,()=> { EventDefine.EventMonsterCry.SendMessage(); },null,true);
+        timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, null, true);
     }
 
     private void OnDestroy()
@@ -42,5 +56,6 @@ public class GameManager : MonoBehaviour
         {
             Timer.Cancel(timer);
         }
+        UniEvent.RemoveListener<EventDefine.EventGameStart>(OnEventGameStart);
     }
 }

@@ -36,4 +36,12 @@ public class EventDefine
             UniEvent.SendMessage(new EventPlateMove());
         }
     }
+
+    public class EventGameStart : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventGameStart());
+        }
+    }
 }
