@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -7,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class GameData
 {
-    public static int[,] level1MapData = new int[5, 5]
+    public static int[,] level1InitMapTypeData = new int[5, 5]
     {
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 },
@@ -15,7 +16,8 @@ public class GameData
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 }
     };
-    public static int[,] level1PasswordData = new int[5, 5]
+
+    public static int[,] level1InitMapData = new int[5, 5]
     {
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 },
@@ -23,4 +25,39 @@ public class GameData
     { 1, 1, 1, 1, 1 },
     { 1, 1, 1, 1, 1 }
     };
+
+    public static int[,] level1EndMapData = new int[5, 5]
+    {
+    { 1, 1, 1, 1, 1 },
+    { 1, 1, 1, 1, 1 },
+    { 1, 1, 1, 1, 1 },
+    { 1, 1, 1, 1, 1 },
+    { 1, 1, 1, 1, 1 }
+    };
+
+    public static int GetSmallTypeDefaultValue(int bigTileType)
+    {
+        switch ((BigTileType)bigTileType)
+        {
+            case BigTileType.HalfRingType:
+                return (int)HalfRingType.Left;
+            default:
+                return (int)BigTileType.None;
+        }
+    }
+}
+
+public enum BigTileType
+{
+    None = 0,
+    HalfRingType = 1
+}
+
+public enum HalfRingType
+{
+    Left = 1,
+    Right = 2,
+    Top = 3,
+    Bottom = 4,
+    Length = 5
 }
