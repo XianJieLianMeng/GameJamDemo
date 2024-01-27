@@ -12,11 +12,28 @@ public class EventDefine
             UniEvent.SendMessage(new EventMonsterLaugh());
         }
     }
+
+    public class EventMonsterCry : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventMonsterCry());
+        }
+    }
+
     public class EventFlyFly:IEventMessage
     {
         public static void SendMessage()
         {
             UniEvent.SendMessage(new EventFlyFly());
+        }
+    }
+
+    public class EventPlateMove : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventPlateMove());
         }
     }
 }
