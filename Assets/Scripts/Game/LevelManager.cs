@@ -14,13 +14,14 @@ public class LevelManager :Singleton<LevelManager>
     private int[,] mapData;
     public int[,] MapData => mapData;
     private int[,] endMapData;
-    public int[,] EndMapData => endMapData;
+    private int level;
+    public int Level => level;
 
-    public void InitLevel(int[,] mapTypeData, int[,] mapData, int[,] endMapData)
+    public void InitLevel(int[,] mapData, int[,] endMapData,int level)
     {
         this.mapData = mapData;
-        this.mapTypeData = mapTypeData;
         this.endMapData = endMapData;
+        this.level = level;
     }
 
     /// <summary>
@@ -30,15 +31,10 @@ public class LevelManager :Singleton<LevelManager>
     /// <param name="y"></param>
     /// <param name="bigType"></param>
     /// <param name="smallType"></param>
-    public void UpdateMapData(int x,int y,int bigType,int smallType)
+    public void UpdateMapData(int x,int y,int smallType)
     {
-        int nextValue = smallType;
-        switch ((BigTileType)bigType)
-        {
-            case BigTileType.HalfRingType:
-                nextValue = smallType % (int)HalfRingType.Length != 0 ? smallType % (int)HalfRingType.Length : smallType % (int)HalfRingType.Length + 1;
-                break;
-        }
+        smallType += 1;
+        var nextValue = smallType % (int)HalfRingType.Length != 0 ? smallType % (int)HalfRingType.Length : smallType % (int)HalfRingType.Length + 1;
 
         mapData[x, y] = nextValue;
 

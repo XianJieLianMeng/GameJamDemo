@@ -12,20 +12,16 @@ public class Tile : MonoBehaviour,IPointerDownHandler
 
     //判断动画是否结束
     private bool flag = true;
-    
-    public void SetTile(int tileType)
-    private BigTileType bigType;
-    private int smallType;
+    private int value;
     private int x, y;
     /// <summary>
     /// 根据类型值设置旋转角度
     /// </summary>
     /// <param name="value"></param>
-    public virtual void Init(int x,int y,int bigType,int smallType)
+    public void Init(int x,int y,int value)
     {
         //根据类型
-        this.bigType = (BigTileType)bigType;
-        this.smallType = smallType;
+        this.value = value;
         this.x = x;
         this.y = y;
     }

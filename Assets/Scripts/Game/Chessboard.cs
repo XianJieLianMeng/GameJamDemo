@@ -10,17 +10,17 @@ public class Chessboard : MonoBehaviour
 
     public void Init()
     {
-        InitializeChessboard(LevelManager.Instance.MapTypeData,LevelManager.Instance.MapData);
+        InitializeChessboard(LevelManager.Instance.MapData);
     }
 
-    private void InitializeChessboard(int[,] mapTypeData,int[,] mapData)
+    private void InitializeChessboard(int[,] mapData)
     {
-        int width = mapTypeData.GetLength(0);
-        int height = mapTypeData.GetLength(1);
+        int width = mapData.GetLength(0);
+        int height = mapData.GetLength(1);
         int[,] levelData = new int[width,height];
-        for (int i = 0; i < mapTypeData.GetLength(0); i++)
+        for (int i = 0; i < width; i++)
         {
-            for (int j = 0; j < mapTypeData.GetLength(1); j++)
+            for (int j = 0; j <height; j++)
             {
                 Vector3 position = new Vector3(i, j, 0);
                 //GameObject go = TileManager.Instance.InstiateTile(mapData[i,j],position,Quaternion.identity);
@@ -29,7 +29,7 @@ public class Chessboard : MonoBehaviour
                 go.transform.parent = transform;
                 go.transform.localScale = Vector3.one;
                 var tile = go.GetComponent<Tile>();
-                tile.Init(i,j,mapTypeData[i,j],mapData[i, j]);
+                tile.Init(i,j,mapData[i, j]);
             }
         }
 
