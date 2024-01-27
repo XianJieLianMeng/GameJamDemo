@@ -1107,6 +1107,7 @@ MonoBehaviour:
   right: {fileID: 671912831}
   monster: {fileID: 444497381}
   overBtn: {fileID: 940923034}
+  chessboard: {fileID: 1954562539}
 --- !u!1 &940923032
 GameObject:
   m_ObjectHideFlags: 0

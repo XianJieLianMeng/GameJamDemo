@@ -57,5 +57,6 @@ public class Chessboard : MonoBehaviour
         }
 
         transform.localScale = new Vector3(0.84f, 0.84f, 0.84f);
+        gameObject.SetActive(false);
     }
 }
