@@ -29,7 +29,7 @@ public class Chessboard : MonoBehaviour
         {
             for (int j = 0; j < width; j++)
             {
-                Vector3 position = new Vector3(j-2,height -i -2, 0);
+                Vector3 position = new Vector3(j+1.6f,height -i -4.1f, 0);
                 GameObject go = Instantiate(tilePrefab, position, Quaternion.identity);
                 go.name = $"Tile {i} {j}";
                 go.transform.parent = transform;
@@ -55,5 +55,7 @@ public class Chessboard : MonoBehaviour
                 index++;
             }
         }
+
+        transform.localScale = new Vector3(0.84f, 0.84f, 0.84f);
     }
 }
