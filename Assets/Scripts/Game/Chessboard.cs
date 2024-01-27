@@ -11,6 +11,7 @@ public class Chessboard : MonoBehaviour
     [SerializeField] private List<Sprite> leveOne;
     [SerializeField] private List<Sprite> leveTwo;
     [SerializeField] private List<Sprite> leveThree;
+    [SerializeField] private List<Sprite> leveFour;
     [SerializeField] private Transform cam;
     
     public void Init()
@@ -20,6 +21,7 @@ public class Chessboard : MonoBehaviour
 
     private void InitializeChessboard(int[,] mapData)
     {
+        transform.ClearChildren();
         int width = mapData.GetLength(0);
         int height = mapData.GetLength(1);
         int index = 0;
@@ -36,16 +38,20 @@ public class Chessboard : MonoBehaviour
                 go.transform.localScale = Vector3.one;
                 var tile = go.GetComponent<Tile>();
                 tile.Init(i,j,mapData[i, j]);
-                if (LevelManager.Instance.Level == 1)
+                if (LevelManager.Instance.Level == 0)
                 {
                     go.GetComponent<Image>().sprite = leveOne[index];
-                }else if (LevelManager.Instance.Level == 2)
+                }else if (LevelManager.Instance.Level == 1)
                 {
-                    
+                    go.GetComponent<Image>().sprite = leveTwo[index];
+                }
+                else if (LevelManager.Instance.Level == 2)
+                {
+                    go.GetComponent<Image>().sprite = leveThree[index];
                 }
                 else
                 {
-                    
+                    go.GetComponent<Image>().sprite = leveFour[index];
                 }
 
                 index++;

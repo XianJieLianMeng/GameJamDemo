@@ -34,11 +34,154 @@ public class GameData
     { 3, 1, 3, 1, 0 },
     { 2, 1, 1, 1, 3 }
     };
+
+    public static int[,] level2InitMapData = new int[5, 5]
+    {
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 }
+    };
+
+    public static int[,] level2ModData = new int[5, 5]
+    {
+        { 4, 4, 4, 2, 4 },
+        { 2, 2, 4, 2, 4 },
+        { 4, 4, 4, 4, 4 },
+        { 4, 2, 4, 2, 4 },
+        { 4, 2, 4, 4, 4 }
+    };
+
+    public static int[,] level2EndMapData = new int[5, 5]
+    {
+    { 3, 2, 0, 1, 3 },
+    { 0, 0, 0, 1, 1 },
+    { 0, 2, 4, 2, 0 },
+    { 3, 1, 3, 1, 0 },
+    { 2, 1, 1, 1, 3 }
+    };
+
+    public static int[,] level3InitMapData = new int[5, 5]
+    {
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 }
+    };
+
+    public static int[,] level3ModData = new int[5, 5]
+    {
+        { 4, 4, 4, 2, 4 },
+        { 2, 2, 4, 2, 4 },
+        { 4, 4, 4, 4, 4 },
+        { 4, 2, 4, 2, 4 },
+        { 4, 2, 4, 4, 4 }
+    };
+
+    public static int[,] level3EndMapData = new int[5, 5]
+    {
+    { 3, 2, 0, 1, 3 },
+    { 0, 0, 0, 1, 1 },
+    { 0, 2, 4, 2, 0 },
+    { 3, 1, 3, 1, 0 },
+    { 2, 1, 1, 1, 3 }
+    };
+
+    public static int[,] level4InitMapData = new int[5, 5]
+   {
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 }
+   };
+
+    public static int[,] level4ModData = new int[5, 5]
+    {
+        { 4, 4, 4, 2, 4 },
+        { 2, 2, 4, 2, 4 },
+        { 4, 4, 4, 4, 4 },
+        { 4, 2, 4, 2, 4 },
+        { 4, 2, 4, 4, 4 }
+    };
+
+    public static int[,] level4EndMapData = new int[5, 5]
+    {
+    { 3, 2, 0, 1, 3 },
+    { 0, 0, 0, 1, 1 },
+    { 0, 2, 4, 2, 0 },
+    { 3, 1, 3, 1, 0 },
+    { 2, 1, 1, 1, 3 }
+    };
+
+
+    public static int[,] GetInitMapData(int level)
+    {
+        if(level == 0)
+        {
+            return level1InitMapData;
+        }
+        else if(level == 1)
+        {
+            return level2InitMapData;
+        }
+        else if(level == 2)
+        {
+            return level3InitMapData;
+        }
+        else 
+        {
+            return level4InitMapData;
+        }
+    }
+
+    public static int[,] GetEndMapData(int level)
+    {
+        if (level == 0)
+        {
+            return level1EndMapData;
+        }
+        else if (level == 1)
+        {
+            return level2EndMapData;
+        }
+        else if (level == 2)
+        {
+            return level3EndMapData;
+        }
+        else 
+        {
+            return level4EndMapData;
+        }
+    }
+
+    public static int[,] GetModData(int level)
+    {
+        if (level == 0)
+        {
+            return level1ModData;
+        }
+        else if (level == 1)
+        {
+            return level2ModData;
+        }
+        else if (level == 2)
+        {
+            return level3ModData;
+        }
+        else
+        {
+            return level4ModData;
+        }
+    }
 }
 
 public class GameDefine
 {
     public const int AlwaysPassword = 4;
+    public const int MaxLevel = 5;
 }
 
 public enum HalfRingType

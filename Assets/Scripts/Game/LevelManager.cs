@@ -40,7 +40,19 @@ public class LevelManager :Singleton<LevelManager>
         if (mapData.IsPasswordCorrect(endMapData))
         {
             Debug.LogError("GameOver");
+            PassLevel();
         }
+    }
+
+    public void PassLevel()
+    {
+        level++;
+        if(level == GameDefine.MaxLevel)
+        {
+            Debug.Log("恭喜你已经通关了！关卡已重置");
+            level = 0;
+        }
+        PlayerPrefs.SetInt("Level", level);
     }
 }
         
