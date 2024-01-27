@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         }
         chessboard.Init();
         timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, null, true);
+        AudioManager.Instance.PlayBackgroundMusic();
     }
 
     private void OnDestroy()

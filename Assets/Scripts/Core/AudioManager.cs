@@ -17,6 +17,12 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         return audioClips[index];
     }
 
+
+    public void PlayBackgroundMusic()
+    {
+        PlayBackgroundMusic(GetAudioClip(0));
+    }
+
     // 播放背景音乐
     public void PlayBackgroundMusic(AudioClip musicClip)
     {
