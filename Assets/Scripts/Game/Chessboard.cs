@@ -17,12 +17,14 @@ public class Chessboard : MonoBehaviour
             for (int j = 0; j < mapData.GetLength(1); j++)
             {
                 Vector3 position = new Vector3(i, j, 0);
-                GameObject tile = Instantiate(tilePrefab, position, Quaternion.identity);
-                tile.name = $"Tile {i} {j}";
-                tile.transform.parent = transform;
+                //GameObject go = TileManager.Instance.InstiateTile(mapData[i,j],position,Quaternion.identity);
+                GameObject go = Instantiate(tilePrefab, position, Quaternion.identity);
+                go.name = $"Tile {i} {j}";
+                go.transform.parent = transform;
+                var tile = go.GetComponent<Tile>();
                 //if (mapData[i][j] != 0)
                 //{  
-                //    //³õÊ¼»¯ÔªËØ TODO
+                //    åˆå§‹åŒ–å…ƒç´  TODO
                 //   //FlowManager.Instance.PlaceHead(Colors.ColorOrder[currentLevel[x][y] - 1], x, y);
                 //}
             }

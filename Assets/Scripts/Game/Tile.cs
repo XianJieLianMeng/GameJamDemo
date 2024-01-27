@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 public class Tile : MonoBehaviour
 {
+    public void SetTile(int tileType)
+    {
+        //根据类型
+    }
 
     private void RotateTile()
     {
