@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UniFramework.Event;
 using UnityEngine;
+using UnityTimer;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private Chessboard chessboard;
+    private Timer timer;
 
     private void Awake()
     {
@@ -31,5 +33,14 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Invalid level index: " + level);
         }
         chessboard.Init();
+        timer = Timer.Register(20f,()=> { EventDefine.EventMonsterCry.SendMessage(); },null,true);
+    }
+
+    private void OnDestroy()
+    {
+        if(timer != null)
+        {
+            Timer.Cancel(timer);
+        }
     }
 }

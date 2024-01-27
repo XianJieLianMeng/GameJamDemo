@@ -13,6 +13,14 @@ public class EventDefine
         }
     }
 
+    public class EventMonsterCry : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventMonsterCry());
+        }
+    }
+
     public class EventFlyFly:IEventMessage
     {
         public static void SendMessage()
