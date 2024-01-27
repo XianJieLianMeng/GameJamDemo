@@ -9,6 +9,7 @@ public class DialogUI : MonoBehaviour
     public Transform right;
     public GameObject monster;
     public Button overBtn;
+    public GameObject chessboard;
     void Start()
     {
         overBtn.onClick.AddListener(OverBtnClick);
@@ -24,6 +25,7 @@ public class DialogUI : MonoBehaviour
             {
                 monster.SetActive(true);
                 EventDefine.EventPlateMove.SendMessage();
+                chessboard.SetActive(true);
             });
         });
     }
