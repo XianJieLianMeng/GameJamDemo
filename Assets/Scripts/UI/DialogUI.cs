@@ -23,6 +23,7 @@ public class DialogUI : MonoBehaviour
             right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
             {
                 monster.SetActive(true);
+                EventDefine.EventPlateMove.SendMessage();
             });
         });
     }
