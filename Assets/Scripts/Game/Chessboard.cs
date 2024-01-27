@@ -27,9 +27,7 @@ public class Chessboard : MonoBehaviour
         {
             for (int j = 0; j < width; j++)
             {
-                // Vector3 position = new Vector3(i, j, 0);
                 Vector3 position = new Vector3(j-2,height -i -2, 0);
-                //GameObject go = TileManager.Instance.InstiateTile(mapData[i,j],position,Quaternion.identity);
                 GameObject go = Instantiate(tilePrefab, position, Quaternion.identity);
                 go.name = $"Tile {i} {j}";
                 go.transform.parent = transform;
