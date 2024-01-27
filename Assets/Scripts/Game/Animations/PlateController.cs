@@ -27,6 +27,7 @@ public class PlateController : MonoBehaviour
     {
         if (message is EventDefine.EventPlateMove)
         {
+            Debug.Log("plateMove");
             animator.SetTrigger("plateMove");
         }
     }
