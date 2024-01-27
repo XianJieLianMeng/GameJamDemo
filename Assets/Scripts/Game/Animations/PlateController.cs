@@ -4,7 +4,7 @@ using UniFramework.Event;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlateController : MonoBehaviour,IPointerClickHandler
+public class PlateController : MonoBehaviour
 {
     private Animator animator;
 
@@ -15,24 +15,19 @@ public class PlateController : MonoBehaviour,IPointerClickHandler
 
     private void Start()
     {
-        UniEvent.AddListener<EventDefine.EventMonsterLaugh>(OnEventHandler);
+        UniEvent.AddListener<EventDefine.EventPlateMove>(OnEventHandler);
     }
 
     private void OnDestroy()
     {
-        UniEvent.RemoveListener<EventDefine.EventMonsterLaugh>(OnEventHandler);
+        UniEvent.RemoveListener<EventDefine.EventPlateMove>(OnEventHandler);
     }
 
     private void OnEventHandler(IEventMessage message)
     {
-        if (message is EventDefine.EventMonsterLaugh)
+        if (message is EventDefine.EventPlateMove)
         {
-            animator.SetTrigger("laugh");
+            animator.SetTrigger("plateMove");
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        animator.SetTrigger("laugh");
     }
 }
