@@ -3,9 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Tile : MonoBehaviour
 {
-    public void SetTile(int tileType)
+    private BigTileType bigType;
+    private int smallType;
+    private int x, y;
+    /// <summary>
+    /// 根据类型值设置旋转角度
+    /// </summary>
+    /// <param name="value"></param>
+    public virtual void Init(int x,int y,int bigType,int smallType)
     {
         //根据类型
+        this.bigType = (BigTileType)bigType;
+        this.smallType = smallType;
+        this.x = x;
+        this.y = y;
     }
 
     private void RotateTile()

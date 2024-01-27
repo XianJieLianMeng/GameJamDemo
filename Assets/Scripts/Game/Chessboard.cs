@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Chessboard : MonoBehaviour
 {
@@ -7,14 +8,17 @@ public class Chessboard : MonoBehaviour
     [SerializeField] private Transform cam;
     private void Start()
     {
-        InitializeChessboard(GameData.level1MapData);
+        InitializeChessboard(LevelManager.Instance.MapTypeData,LevelManager.Instance.MapData);
     }
 
-    private void InitializeChessboard(int[,] mapData)
+    private void InitializeChessboard(int[,] mapTypeData,int[,] mapData)
     {
-        for (int i = 0; i < mapData.GetLength(0); i++)
+        int width = mapTypeData.GetLength(0);
+        int height = mapTypeData.GetLength(1);
+        int[,] levelData = new int[width,height];
+        for (int i = 0; i < mapTypeData.GetLength(0); i++)
         {
-            for (int j = 0; j < mapData.GetLength(1); j++)
+            for (int j = 0; j < mapTypeData.GetLength(1); j++)
             {
                 Vector3 position = new Vector3(i, j, 0);
                 //GameObject go = TileManager.Instance.InstiateTile(mapData[i,j],position,Quaternion.identity);
@@ -22,11 +26,7 @@ public class Chessboard : MonoBehaviour
                 go.name = $"Tile {i} {j}";
                 go.transform.parent = transform;
                 var tile = go.GetComponent<Tile>();
-                //if (mapData[i][j] != 0)
-                //{  
-                //    初始化元素 TODO
-                //   //FlowManager.Instance.PlaceHead(Colors.ColorOrder[currentLevel[x][y] - 1], x, y);
-                //}
+                tile.Init(i,j,mapTypeData[i,j],mapData[i, j]);
             }
         }
 
