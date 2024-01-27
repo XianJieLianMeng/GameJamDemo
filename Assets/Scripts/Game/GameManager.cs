@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
  
     void Start()
     {
-        var level = PlayerPrefs.GetInt("Level");
+        var level = PlayerPrefs.GetInt("Level",0);
 
         if (level >= 0 && level < GameDefine.MaxLevel)
         {
