@@ -15,10 +15,10 @@ public class HoleController : MonoBehaviour,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("hole.SetActive(true);");
         if (!hole.activeSelf)
         {
             hole.SetActive(true);
         }
+        EventDefine.EventFlyFly.SendMessage();
     }
 }

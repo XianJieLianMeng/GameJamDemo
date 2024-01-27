@@ -12,4 +12,11 @@ public class EventDefine
             UniEvent.SendMessage(new EventMonsterLaugh());
         }
     }
+    public class EventFlyFly:IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventFlyFly());
+        }
+    }
 }
