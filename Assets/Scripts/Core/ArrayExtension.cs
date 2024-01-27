@@ -25,4 +25,25 @@ public static class ArrayExtension
 
         return true;
     }
+    
+    public static bool IsPasswordCorrect(this int[,] mapData, int[,] endMapdata)
+    {
+        // 比较数组元素
+        for (int i = 0; i < mapData.GetLength(0); i++)
+        {
+            for (int j = 0; j < mapData.GetLength(1); j++)
+            {
+                if (endMapdata[i, j] == GameDefine.AlwaysPassword || mapData[i, j] == endMapdata[i,j])
+                {
+                   continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 }

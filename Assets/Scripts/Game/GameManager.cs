@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LevelManager.Instance.InitLevel( GameData.level1InitMapData, GameData.level1EndMapData,1);
+        LevelManager.Instance.InitLevel( GameData.level1InitMapData, GameData.level1EndMapData,GameData.level1ModData,1);
         chessboard.Init();
     }
 }
