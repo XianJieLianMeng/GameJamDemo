@@ -33,10 +33,7 @@ public class LevelManager :Singleton<LevelManager>
     /// <param name="smallType"></param>
     public void UpdateMapData(int x,int y,int smallType)
     {
-        smallType += 1;
-        var nextValue = smallType % (int)HalfRingType.Length != 0 ? smallType % (int)HalfRingType.Length : smallType % (int)HalfRingType.Length + 1;
-
-        mapData[x, y] = nextValue;
+        mapData[x, y] = smallType % 4;
 
         if (mapData.AreArraysEqual(endMapData))
         {

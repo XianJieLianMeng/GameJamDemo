@@ -32,20 +32,16 @@ public class Tile : MonoBehaviour,IPointerDownHandler
         //实现旋转逻辑
         var rotation = rectTransform.rotation.eulerAngles;
         var vector3 = new Vector3(rotation.x,rotation.y,rotation.z-90f);
-        rectTransform.DOLocalRotate(vector3,0.5f).OnComplete(() => { flag = true;});
+        rectTransform.DOLocalRotate(vector3,0.5f).OnComplete(() =>
+        {
+            flag = true;
+            value += 1;
+            Debug.Log($"x:{x}y:{y}");
+            Debug.Log($"value{value}");
+            LevelManager.Instance.UpdateMapData(x, y, value);
+        });
     }
-
-    private void SaveLevelData()
-    {
-        // 编写写入当前关卡数据的代码
-        // TODO: 实现写入数据逻辑
-    }
-
-    private void CheckWinCondition()
-    {
-        // 编写判断通关条件的代码
-        // TODO: 实现判断通关条件的逻辑
-    }
+    
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -58,11 +54,5 @@ public class Tile : MonoBehaviour,IPointerDownHandler
 
         // 旋转自身
         RotateTile();
-
-        // 写入当前关卡数据
-        SaveLevelData();
-
-        // 判断是否满足通关条件
-        CheckWinCondition();
     }
 }
