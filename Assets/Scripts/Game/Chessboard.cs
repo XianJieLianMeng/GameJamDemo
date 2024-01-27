@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Chessboard : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Chessboard : MonoBehaviour
                 GameObject go = Instantiate(tilePrefab, position, Quaternion.identity);
                 go.name = $"Tile {i} {j}";
                 go.transform.parent = transform;
+                go.transform.localScale = Vector3.one;
                 var tile = go.GetComponent<Tile>();
                 //if (mapData[i][j] != 0)
                 //{  

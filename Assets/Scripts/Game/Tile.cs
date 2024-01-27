@@ -1,8 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
-public class Tile : MonoBehaviour
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class Tile : MonoBehaviour,IPointerDownHandler
 {
+
+    public RectTransform rectTransform;
+
+    //判断动画是否结束
+    private bool flag = true;
+    
     public void SetTile(int tileType)
     {
         //根据类型
@@ -10,8 +20,11 @@ public class Tile : MonoBehaviour
 
     private void RotateTile()
     {
-        // 编写旋转自身的代码
-        // TODO: 实现旋转逻辑
+        flag = false;
+        //实现旋转逻辑
+        var rotation = rectTransform.rotation.eulerAngles;
+        var vector3 = new Vector3(rotation.x,rotation.y,rotation.z-90f);
+        rectTransform.DOLocalRotate(vector3,0.5f).OnComplete(() => { flag = true;});
     }
 
     private void SaveLevelData()
@@ -26,8 +39,12 @@ public class Tile : MonoBehaviour
         // TODO: 实现判断通关条件的逻辑
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
+        if (!flag)
+        {
+            return;
+        }
         // 在这里编写处理点击事件的代码
         Debug.Log("Tile was clicked!");
 
