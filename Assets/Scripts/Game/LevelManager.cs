@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UniFramework.Event;
 using UnityEngine;
 
 /// <summary>
@@ -41,6 +42,7 @@ public class LevelManager :Singleton<LevelManager>
         {
             Debug.LogError("GameOver");
             PassLevel();
+            EventDefine.EventMonsterLaugh.SendMessage();
         }
     }
 

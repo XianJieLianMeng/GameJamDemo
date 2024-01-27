@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UniFramework.Event;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private Chessboard chessboard;
- 
-    void Start()
+
+    private void Awake()
+    {
+        UniEvent.Initalize();
+    }
+
+    private void Start()
     {
         var level = PlayerPrefs.GetInt("Level",0);
 
