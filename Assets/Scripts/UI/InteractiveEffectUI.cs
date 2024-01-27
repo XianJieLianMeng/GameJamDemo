@@ -62,8 +62,8 @@ public class InteractiveEffectUI : MonoBehaviour
             var path2 = BezierPathUtility.CalculateBezierPath(10, fly2Path[0].position, fly2Path[1].position, fly2Path[2].position);
             var path3 = BezierPathUtility.CalculateBezierPath(10, fly3Path[0].position, fly3Path[1].position, fly3Path[2].position);
             fly1.transform.DOPath(path1, 2).SetEase(Ease.Linear).SetLookAt(0.01f).OnComplete(() => { Destroy(fly1,3f);});
-            fly2.transform.DOPath(path2, 3).SetEase(Ease.Linear).SetLookAt(0.01f).OnComplete(() => { Destroy(fly2,4f);});
-            fly3.transform.DOPath(path3, 4).SetEase(Ease.Linear).SetLookAt(0.01f).OnComplete(() => { Destroy(fly3,5f);
+            fly2.transform.DOPath(path2, 3).SetEase(Ease.Linear).SetLookAt(0.01f).OnComplete(() => { Destroy(fly2,2f);});
+            fly3.transform.DOPath(path3, 4).SetEase(Ease.Linear).SetLookAt(0.01f).OnComplete(() => { Destroy(fly3,1f);
                 _flag = false;
             }); 
         }

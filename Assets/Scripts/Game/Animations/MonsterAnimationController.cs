@@ -18,7 +18,6 @@ public class MonsterAnimationController :MonoBehaviour, IPointerClickHandler
     {
         UniEvent.AddListener<EventDefine.EventMonsterLaugh>(OnEventHandler);
         UniEvent.AddListener<EventDefine.EventMonsterCry>(OnEventHandler);
-        gameObject.SetActive(false);
     }
 
     private void OnDestroy()
