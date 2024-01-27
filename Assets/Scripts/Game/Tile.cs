@@ -36,8 +36,6 @@ public class Tile : MonoBehaviour,IPointerDownHandler
         {
             flag = true;
             value += 1;
-            Debug.Log($"x:{x}y:{y}");
-            Debug.Log($"value{value}");
             LevelManager.Instance.UpdateMapData(x, y, value);
         });
     }
@@ -49,9 +47,6 @@ public class Tile : MonoBehaviour,IPointerDownHandler
         {
             return;
         }
-        // 在这里编写处理点击事件的代码
-        Debug.Log("Tile was clicked!");
-
         // 旋转自身
         RotateTile();
     }

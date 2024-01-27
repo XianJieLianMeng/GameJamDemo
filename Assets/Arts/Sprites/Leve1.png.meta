@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Annular_0
+      name: Leve1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b7f0fba84a732e49a7d1901b658510c
-      internalID: 655396284
+      spriteID: 1573adab42626a947bcf95893f358515
+      internalID: -1615006503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_1
+      name: Leve1_1
       rect:
         serializedVersion: 2
         x: 204
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cdcdfc2cb32ecc41b2b5d2f68c7a3a8
-      internalID: -2063026748
+      spriteID: ce1be38069e52104c8c3ff96db162e4a
+      internalID: -771574613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_2
+      name: Leve1_2
       rect:
         serializedVersion: 2
         x: 408
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 830390a8114f8074b83808bbe7875d03
-      internalID: 1459536472
+      spriteID: feb974493bc1d7541a9beece90529bda
+      internalID: -1349115340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_3
+      name: Leve1_3
       rect:
         serializedVersion: 2
         x: 612
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a80a8b17a6bec74599c5b5995996786
-      internalID: 1463939206
+      spriteID: 9b7f51b1feeb2554a992d1eabd1a571b
+      internalID: -1223934493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_4
+      name: Leve1_4
       rect:
         serializedVersion: 2
         x: 816
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9d8e3195572fc445803e2a241934107
-      internalID: -488289039
+      spriteID: 8a777f6e342d19f4fada5a34851f9b71
+      internalID: -649450568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_5
+      name: Leve1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3559e34f66fd69f44b4590c47e205ab8
-      internalID: 1654562546
+      spriteID: f2abf05cf85d1ce43be84baaa16d1ce5
+      internalID: -2058001639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_6
+      name: Leve1_6
       rect:
         serializedVersion: 2
         x: 204
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e560825fb71c14cbf78ca544fdab1d
-      internalID: 886747755
+      spriteID: be28eef2d970afc4681d72dfec2133be
+      internalID: -167796846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_7
+      name: Leve1_7
       rect:
         serializedVersion: 2
         x: 408
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89ed6d6519f89b74ebfe3aa576bd9b73
-      internalID: -2059722808
+      spriteID: 387180d83a0b09e4b9719b1b9f5609be
+      internalID: -1514384358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_8
+      name: Leve1_8
       rect:
         serializedVersion: 2
         x: 612
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412fd5ced27ce044989c54c7ef5f9b42
-      internalID: -1280597358
+      spriteID: c4afafd4f950e124596e6f9b851dee1a
+      internalID: -2098554222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_9
+      name: Leve1_9
       rect:
         serializedVersion: 2
         x: 816
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a640f0c90d4e7d43b9ae23f61d45699
-      internalID: 900223941
+      spriteID: fc0de9a1b72281548ac7c9708ede47fd
+      internalID: -452561896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_10
+      name: Leve1_10
       rect:
         serializedVersion: 2
         x: 0
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc6968f6e4e83c34d900f497badf3781
-      internalID: -514132448
+      spriteID: a89b7a3b4505db04b8e29946a3e98105
+      internalID: 1981923947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_11
+      name: Leve1_11
       rect:
         serializedVersion: 2
         x: 204
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b32e6dbd449232e4aafe779f44f55a81
-      internalID: -1033556715
+      spriteID: a5b7c900a9fc9274588f62dd7c952224
+      internalID: -1439532722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_12
+      name: Leve1_12
       rect:
         serializedVersion: 2
         x: 408
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c8047aa4ff64a45a9145d62306398f
-      internalID: 1906816776
+      spriteID: 3272624588e049c47bb4fe995f1a3246
+      internalID: 1226927057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_13
+      name: Leve1_13
       rect:
         serializedVersion: 2
         x: 612
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcbafdf858b8ff04bbe0654f875e0c12
-      internalID: -124399395
+      spriteID: 844ca9e97287b5747a6f196eb606b5b4
+      internalID: 1598176639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_14
+      name: Leve1_14
       rect:
         serializedVersion: 2
         x: 816
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab95ca37fc1e68499ec9c0fe5329138
-      internalID: 1662179712
+      spriteID: b9be29e5708c18b4b89e92ac8df3ac2d
+      internalID: 170931471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_15
+      name: Leve1_15
       rect:
         serializedVersion: 2
         x: 0
@@ -452,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5bce94d1cfc58458266d1838250fde
-      internalID: -2112956428
+      spriteID: b4d466cfb8f3bbb45917e07f3d36a32d
+      internalID: 1317334462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_16
+      name: Leve1_16
       rect:
         serializedVersion: 2
         x: 204
@@ -473,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc41f961ee4d3c44aaf1aa881041ebd
-      internalID: -1091408977
+      spriteID: 37757745d468f5945820b66a9a4ea076
+      internalID: 2125195970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_17
+      name: Leve1_17
       rect:
         serializedVersion: 2
         x: 408
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42c1143f6c458774a86bf377748c4c46
-      internalID: 1515924647
+      spriteID: 46063070041114e4e9e8eb7ca584b0b6
+      internalID: -385352632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_18
+      name: Leve1_18
       rect:
         serializedVersion: 2
         x: 612
@@ -515,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddc018ff4a7f64d4a9517942ed3ea783
-      internalID: 1824641625
+      spriteID: 60c0f8e4a424bdc4ab3cff14f8d8d18b
+      internalID: 2009922489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_19
+      name: Leve1_19
       rect:
         serializedVersion: 2
         x: 816
@@ -536,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21414549fc45b8149bd64ab113ae0985
-      internalID: -41122359
+      spriteID: 059bb757604d37148b16dbdae881f776
+      internalID: -163703840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_20
+      name: Leve1_20
       rect:
         serializedVersion: 2
         x: 0
@@ -557,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b36a1cfccfb0b41b07a84f64c22d37
-      internalID: 1134032103
+      spriteID: 01bf2fcdc57dd3e4d8861e3e193f9faa
+      internalID: -209375668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_21
+      name: Leve1_21
       rect:
         serializedVersion: 2
         x: 204
@@ -578,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9968cb27d3c0d2d468e88cd1c2217f0a
-      internalID: -501737942
+      spriteID: 5cc43a79b5ea30c40834c7587eddae47
+      internalID: -1643009651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_22
+      name: Leve1_22
       rect:
         serializedVersion: 2
         x: 408
@@ -599,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04dcb4b562434014e836379e36b6ff6b
-      internalID: 604512835
+      spriteID: 651b8ab272ece874dabe1297eafe7c7e
+      internalID: 1726887878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_23
+      name: Leve1_23
       rect:
         serializedVersion: 2
         x: 612
@@ -620,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 068c4c6540a064947be8f206d15fc821
-      internalID: -369203622
+      spriteID: 1ea246f5696ea9040bb797e230ed5b7e
+      internalID: 44342848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Annular_24
+      name: Leve1_24
       rect:
         serializedVersion: 2
         x: 816
@@ -641,8 +641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a373bd2bd0a11a4aa7d799b5aeab114
-      internalID: -1347156546
+      spriteID: 7601cf498640d8843910dd1d2f6c8220
+      internalID: 1841860518
       vertices: []
       indices: 
       edges: []
@@ -658,31 +658,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Annular_0: 655396284
-      Annular_1: -2063026748
-      Annular_10: -514132448
-      Annular_11: -1033556715
-      Annular_12: 1906816776
-      Annular_13: -124399395
-      Annular_14: 1662179712
-      Annular_15: -2112956428
-      Annular_16: -1091408977
-      Annular_17: 1515924647
-      Annular_18: 1824641625
-      Annular_19: -41122359
-      Annular_2: 1459536472
-      Annular_20: 1134032103
-      Annular_21: -501737942
-      Annular_22: 604512835
-      Annular_23: -369203622
-      Annular_24: -1347156546
-      Annular_3: 1463939206
-      Annular_4: -488289039
-      Annular_5: 1654562546
-      Annular_6: 886747755
-      Annular_7: -2059722808
-      Annular_8: -1280597358
-      Annular_9: 900223941
+      Leve1_0: -1615006503
+      Leve1_1: -771574613
+      Leve1_10: 1981923947
+      Leve1_11: -1439532722
+      Leve1_12: 1226927057
+      Leve1_13: 1598176639
+      Leve1_14: 170931471
+      Leve1_15: 1317334462
+      Leve1_16: 2125195970
+      Leve1_17: -385352632
+      Leve1_18: 2009922489
+      Leve1_19: -163703840
+      Leve1_2: -1349115340
+      Leve1_20: -209375668
+      Leve1_21: -1643009651
+      Leve1_22: 1726887878
+      Leve1_23: 44342848
+      Leve1_24: 1841860518
+      Leve1_3: -1223934493
+      Leve1_4: -649450568
+      Leve1_5: -2058001639
+      Leve1_6: -167796846
+      Leve1_7: -1514384358
+      Leve1_8: -2098554222
+      Leve1_9: -452561896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
