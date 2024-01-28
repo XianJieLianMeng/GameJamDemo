@@ -33,6 +33,10 @@ namespace Game
             var s = GlobalConfig.SnakeDialog[SnakeDialogIndex];
             if (SnakeDialogIndex < GlobalConfig.SnakeDialog.Length -1)
             {
+                if (SnakeDialogIndex == 6)
+                {
+                    CurrentActor = Actor.DuYan;
+                }
                 SnakeDialogIndex++;
             }
             return s;
@@ -42,6 +46,11 @@ namespace Game
             var s = GlobalConfig.DuYanCorrectDialog[DuYanCorrectDialogIndex];
             if (DuYanCorrectDialogIndex < GlobalConfig.DuYanCorrectDialog.Length -1)
             {
+                if (DuYanCorrectDialogIndex == 2)
+                {
+                    //开始游戏
+                    EventDefine.EventStartDialogOver.SendMessage();
+                }
                 DuYanCorrectDialogIndex++;
             }
             return s;

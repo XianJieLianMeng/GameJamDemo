@@ -44,4 +44,12 @@ public class EventDefine
             UniEvent.SendMessage(new EventGameStart());
         }
     }
+    
+    public class EventStartDialogOver : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventStartDialogOver());
+        }
+    }
 }
