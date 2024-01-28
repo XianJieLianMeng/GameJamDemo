@@ -31,16 +31,17 @@ public class NPCUI : MonoBehaviour
 
     private void ChangeNpc(int level)
     {
+        Debug.Log($"level = {level}");
         for (int i = 0; i < npcList.Count; i++)
         {
-            if (level == i)
+            if (i == level)
             {
-                npcList[level].SetActive(true);
+                npcList[i].SetActive(true);
                 Debug.Log($"ChangeNPC {npcList[level].gameObject.name}");
             }
             else
             {
-                npcList[level].SetActive(false);
+                npcList[i].SetActive(false);
             }
         }
 
