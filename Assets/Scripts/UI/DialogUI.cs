@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Define;
@@ -22,10 +23,24 @@ public class DialogUI : MonoBehaviour
 
     private void OnContinueBtnClick()
     {
-        content.text = DialogManager.GetSnakeCurrentDialog();
         if (DialogManager.SnakeDialogIndex == 6)
         {
             //todo 大眼怪走来
+        }
+        switch (DialogManager.CurrentActor)
+        {
+            case Actor.Snake:
+                content.text = DialogManager.GetSnakeCurrentDialog();
+                break;
+            case Actor.DuYan:
+                
+                break;
+            case Actor.Dog:
+                break;
+            case Actor.SaDan:
+                break;
+            case Actor.Self:
+                break;
         }
     }
     
