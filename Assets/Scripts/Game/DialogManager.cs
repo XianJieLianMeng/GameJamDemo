@@ -80,6 +80,11 @@ namespace Game
             var s = GlobalConfig.DogCorrectDialog[DogCorrectDialogIndex];
             if (DogCorrectDialogIndex < GlobalConfig.DogCorrectDialog.Length -1)
             {
+                if (DogCorrectDialogIndex == 3)
+                {
+                    //todo 让下一个棋盘过来
+                    EventDefine.EventStartDialogOver.SendMessage();
+                }
                 DogCorrectDialogIndex++;
             }
             return s;

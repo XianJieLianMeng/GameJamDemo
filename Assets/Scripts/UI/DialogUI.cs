@@ -22,6 +22,7 @@ public class DialogUI : MonoBehaviour
     public GameObject dogActor;
     public GameObject duyanActor;
     public GameObject sadanActor;
+    public GameObject topUI;
 
     private Sprite dog;
     private Sprite duyan;
@@ -37,6 +38,7 @@ public class DialogUI : MonoBehaviour
         sadan = Resources.Load<Sprite>("Sprites/撒旦");
         self = Resources.Load<Sprite>("Sprites/玩家");
         left.SetActive(false);
+        topUI.SetActive(false);
     }
 
     private void OnContinueBtnClick()
@@ -120,10 +122,10 @@ public class DialogUI : MonoBehaviour
             {
                 right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
                 {
-                    //todo 派发左侧显示事件
                     left.SetActive(true);
                     EventDefine.EventPlateMove.SendMessage();
                     chessboard.SetActive(true);
+                    topUI.SetActive(true);
                 });
             });
         }

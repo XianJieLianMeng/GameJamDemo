@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UniFramework.Event;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 处理每一关的数据
@@ -53,6 +54,8 @@ public class LevelManager :Singleton<LevelManager>
         {
             Debug.Log("恭喜你已经通关了！关卡已重置");
             level = 0;
+            PlayerPrefs.SetInt("Level", level);
+            SceneManager.LoadScene("Menu");
         }
 
         if (level == 1)
@@ -60,6 +63,7 @@ public class LevelManager :Singleton<LevelManager>
             EventDefine.EventStartLevel2.SendMessage();
         }
         PlayerPrefs.SetInt("Level", level);
+        EventDefine.EventBloodUpdate.SendMessage(5);
     }
 }
         

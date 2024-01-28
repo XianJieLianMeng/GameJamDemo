@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UniEvent.AddListener<EventDefine.EventGameStart>(OnEventGameStart);
-        // GameStart();
+        UniEvent.AddListener<EventDefine.EventBloodUpdate>(OnEventGameStart);
     }
 
     private void OnEventGameStart(IEventMessage message)
@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
         if(message is EventDefine.EventGameStart)
         {
             GameStart();
+        }
+        else if(message is EventDefine.EventBloodUpdate msg)
+        {
+            bloodCount = msg.Count;
         }
     }
 
@@ -75,5 +79,6 @@ public class GameManager : MonoBehaviour
             Timer.Cancel(timer);
         }
         UniEvent.RemoveListener<EventDefine.EventGameStart>(OnEventGameStart);
+        UniEvent.RemoveListener<EventDefine.EventBloodUpdate>(OnEventGameStart);
     }
 }

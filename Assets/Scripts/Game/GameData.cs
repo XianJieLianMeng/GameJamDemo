@@ -190,7 +190,7 @@ public class GameData
 public class GameDefine
 {
     public const int AlwaysPassword = 4;
-    public const int MaxLevel = 4;
+    public const int MaxLevel = 2;
 }
 
 public enum HalfRingType
