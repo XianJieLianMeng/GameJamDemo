@@ -8,16 +8,10 @@ using UnityEngine.UI;
 public class GameMenuUI : MonoBehaviour
 {
     public Button startGameBtn;
-    public Button goOnGameBtn;
-    public Button operationBtn;
-    public Button exitBtn;
 
     private void Start()
     {
         startGameBtn.onClick.AddListener(StartGameBtnClick);
-        goOnGameBtn.onClick.AddListener(GoOnGameBtnClick);
-        operationBtn.onClick.AddListener(OperationBtnClick);
-        exitBtn.onClick.AddListener(ExitBtnClick);
     }
 
     private void StartGameBtnClick()
