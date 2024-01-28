@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
             // 处理无效的关卡索引
             Debug.LogError("Invalid level index: " + level);
         }
+        EventDefine.EventGameStartLevel.SendMessage(level);
         chessboard.Init();
         timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, OnUpdate, true);
-        AudioManager.Instance.PlayBackgroundMusic();
     }
 
     private int bloodCount = 5;

@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using UniFramework.Event;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using static EventDefine;
 
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
@@ -9,18 +12,46 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioSource soundEffectSource;
 
     [SerializeField]
-    private List<AudioClip> audioClips = new List<AudioClip>();
+    private List<AudioClip> bgAudioClips = new List<AudioClip>();
 
 
-    public AudioClip GetAudioClip(int index)
+    private void Start()
     {
-        return audioClips[index];
+        UniEvent.AddListener<EventDefine.EventGameStartLevel>(OnEventGameStartLevel);
+    }
+
+    private void OnDestroy()
+    {
+        UniEvent.RemoveListener<EventDefine.EventGameStartLevel>(OnEventGameStartLevel);
+    }
+
+
+    private void OnEventGameStartLevel(IEventMessage message)
+    {
+        if (message is EventGameStartLevel startLevelMsg)
+        {
+            int bgIndex = startLevelMsg.Level;
+            if(startLevelMsg.Level == 1)
+            {
+                bgIndex = 0;
+            }
+            else if(startLevelMsg.Level == 2)
+            {
+                bgIndex = 1;
+            }
+            PlayBackgroundMusic(GetBgAudioClip(bgIndex));
+        }
+    }
+
+    public AudioClip GetBgAudioClip(int index)
+    {
+        return bgAudioClips[index];
     }
 
 
     public void PlayBackgroundMusic()
     {
-        PlayBackgroundMusic(GetAudioClip(0));
+        PlayBackgroundMusic(GetBgAudioClip(0));
     }
 
     // 播放背景音乐
