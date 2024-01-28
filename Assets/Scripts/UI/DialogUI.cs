@@ -18,6 +18,10 @@ public class DialogUI : MonoBehaviour
     public Text content;
     public Text errorContent;
     public Image headSculpture;
+    public GameObject actor;
+    public GameObject dogActor;
+    public GameObject duyanActor;
+    public GameObject sadanActor;
 
     private Sprite dog;
     private Sprite duyan;
@@ -25,6 +29,7 @@ public class DialogUI : MonoBehaviour
     private Sprite self;
     void Start()
     {
+        duyanActor.SetActive(true);
         content.text = DialogManager.GetSnakeCurrentDialog();
         continueBtn.onClick.AddListener(OnContinueBtnClick);
         dog = Resources.Load<Sprite>("Sprites/三头犬");
@@ -79,31 +84,61 @@ public class DialogUI : MonoBehaviour
                 break;
         }
     }
+
+    private void DuYanCome(IEventMessage message)
+    {
+        if (message is EventDefine.EventDuYanCome msg)
+        {
+            var vector3 = new Vector3(332f,164,0);
+            actor.transform.DOLocalMove(vector3, 1f);
+        }
+    }
+    
+    private void ActorBack(IEventMessage message)
+    {
+        if (message is EventDefine.EventActorBack msg)
+        {
+            dogActor.SetActive(false);
+            duyanActor.SetActive(false);
+            sadanActor.SetActive(false);
+            var vector3 = new Vector3(2269f,164,0);
+            actor.transform.DOLocalMove(vector3, 1f);
+        }
+        
+    }
     
     private void OverStartDialog(IEventMessage message)
     {
-        dialogBox.SetActive(false);
-        continueBtn.gameObject.SetActive(false);
-        EventDefine.EventGameStart.SendMessage();
-        var first = new Vector3(-54f,0,0);
-        right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
+        if (message is EventDefine.EventStartDialogOver msg)
         {
-            right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
+            dialogBox.SetActive(false);
+            continueBtn.gameObject.SetActive(false);
+            EventDefine.EventGameStart.SendMessage();
+            var first = new Vector3(-54f,0,0);
+            right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
             {
-                left.SetActive(true);
-                EventDefine.EventPlateMove.SendMessage();
-                chessboard.SetActive(true);
+                right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
+                {
+                    left.SetActive(true);
+                    EventDefine.EventPlateMove.SendMessage();
+                    chessboard.SetActive(true);
+                });
             });
-        });
+        }
+        
     }
 
     private void OnEnable()
     {
         UniEvent.AddListener<EventDefine.EventStartDialogOver>(OverStartDialog);
+        UniEvent.AddListener<EventDefine.EventDuYanCome>(DuYanCome);
+        UniEvent.AddListener<EventDefine.EventDuYanCome>(ActorBack);
     }
 
     private void OnDisable()
     {
         UniEvent.RemoveListener<EventDefine.EventStartDialogOver>(OverStartDialog);
+        UniEvent.RemoveListener<EventDefine.EventDuYanCome>(DuYanCome);
+        UniEvent.RemoveListener<EventDefine.EventDuYanCome>(ActorBack);
     }
 }

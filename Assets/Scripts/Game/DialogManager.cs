@@ -36,6 +36,7 @@ namespace Game
                 if (SnakeDialogIndex == 6)
                 {
                     CurrentActor = Actor.DuYan;
+                    EventDefine.EventDuYanCome.SendMessage();
                 }
                 SnakeDialogIndex++;
             }
@@ -50,6 +51,7 @@ namespace Game
                 {
                     //开始游戏
                     EventDefine.EventStartDialogOver.SendMessage();
+                    EventDefine.EventActorBack.SendMessage();
                 }
                 DuYanCorrectDialogIndex++;
             }

@@ -52,6 +52,22 @@ public class EventDefine
             UniEvent.SendMessage(new EventStartDialogOver());
         }
     }
+    
+    public class EventDuYanCome : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventDuYanCome());
+        }
+    }
+    
+    public class EventActorBack : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventActorBack());
+        }
+    }
 
     public class EventGameStartLevel : IEventMessage
     {
