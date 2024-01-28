@@ -47,8 +47,24 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Invalid level index: " + level);
         }
         chessboard.Init();
-        timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, null, true);
+        timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, OnUpdate, true);
         AudioManager.Instance.PlayBackgroundMusic();
+    }
+
+    private int bloodCount = 5;
+
+    private void OnUpdate(float second)
+    {
+        if(second == 0) { return; }
+        if (second % 4 == 0)
+        {
+            bloodCount--;
+            if(bloodCount<0)
+            {
+                bloodCount = 5;
+            }
+            EventDefine.EventBloodUpdate.SendMessage(bloodCount);
+        }
     }
 
     private void OnDestroy()
