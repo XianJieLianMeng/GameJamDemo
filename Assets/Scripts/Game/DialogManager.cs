@@ -36,7 +36,12 @@ namespace Game
                 if (SnakeDialogIndex == 6)
                 {
                     CurrentActor = Actor.DuYan;
-                    EventDefine.EventDuYanCome.SendMessage();
+                    EventDefine.EventActorCome.SendMessage();
+                }
+                if (SnakeDialogIndex == 10)
+                {
+                    CurrentActor = Actor.Dog;
+                    EventDefine.EventActorCome.SendMessage();
                 }
                 SnakeDialogIndex++;
             }
@@ -45,18 +50,17 @@ namespace Game
         public static string GetDuYanCorrectCurrentDialog()
         {
             var s = GlobalConfig.DuYanCorrectDialog[DuYanCorrectDialogIndex];
+            if (DuYanCorrectDialogIndex == 4)
+            {
+                CurrentActor = Actor.Snake;
+                EventDefine.EventActorBack.SendMessage();
+            }
             if (DuYanCorrectDialogIndex < GlobalConfig.DuYanCorrectDialog.Length -1)
             {
                 if (DuYanCorrectDialogIndex == 2)
                 {
                     //开始游戏
                     EventDefine.EventStartDialogOver.SendMessage();
-                    // EventDefine.EventActorBack.SendMessage();
-                }
-
-                if (DuYanCorrectDialogIndex == 4)
-                {
-                    CurrentActor = Actor.Snake;
                 }
                 DuYanCorrectDialogIndex++;
             }

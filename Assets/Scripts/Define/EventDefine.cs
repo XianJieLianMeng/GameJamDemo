@@ -53,11 +53,11 @@ public class EventDefine
         }
     }
     
-    public class EventDuYanCome : IEventMessage
+    public class EventActorCome : IEventMessage
     {
         public static void SendMessage()
         {
-            UniEvent.SendMessage(new EventDuYanCome());
+            UniEvent.SendMessage(new EventActorCome());
         }
     }
     
