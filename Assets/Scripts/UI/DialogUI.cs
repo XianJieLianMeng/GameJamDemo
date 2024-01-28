@@ -90,7 +90,7 @@ public class DialogUI : MonoBehaviour
     {
         if (message is EventDefine.EventDuYanCome msg)
         {
-            var vector3 = new Vector3(332f,164,0);
+            var vector3 = new Vector3(336f,37,0);
             actor.transform.DOLocalMove(vector3, 1f);
         }
     }
@@ -99,11 +99,16 @@ public class DialogUI : MonoBehaviour
     {
         if (message is EventDefine.EventActorBack msg)
         {
-            dogActor.SetActive(false);
-            duyanActor.SetActive(false);
-            sadanActor.SetActive(false);
             var vector3 = new Vector3(2269f,164,0);
-            actor.transform.DOLocalMove(vector3, 1f);
+            var center = new Vector3(336f,37,0);
+            actor.transform.DOLocalMove(vector3, 1f).OnComplete((() =>
+            {
+                var level = PlayerPrefs.GetInt("Level");
+                dogActor.SetActive(level == 0);
+                duyanActor.SetActive(level == 1);
+                sadanActor.SetActive(level == 2);
+                actor.transform.DOLocalMove(center, 1f);
+            }));
         }
         
     }
@@ -112,7 +117,7 @@ public class DialogUI : MonoBehaviour
     {
         if (message is EventDefine.EventStartDialogOver msg)
         {
-            dialogBox.SetActive(false);
+            gameObject.SetActive(false);
             continueBtn.gameObject.SetActive(false);
             EventDefine.EventGameStart.SendMessage();
             var first = new Vector3(-54f,0,0);
@@ -127,7 +132,15 @@ public class DialogUI : MonoBehaviour
                 });
             });
         }
-        
+    }
+
+    private void StartLevel2(IEventMessage message)
+    {
+        if (message is EventDefine.EventStartLevel2 msg)
+        {
+            continueBtn.gameObject.SetActive(true);
+            OnContinueBtnClick();
+        }
     }
 
     private void OnEnable()
@@ -135,6 +148,7 @@ public class DialogUI : MonoBehaviour
         UniEvent.AddListener<EventDefine.EventStartDialogOver>(OverStartDialog);
         UniEvent.AddListener<EventDefine.EventDuYanCome>(DuYanCome);
         UniEvent.AddListener<EventDefine.EventActorBack>(ActorBack);
+        UniEvent.AddListener<EventDefine.EventStartLevel2>(StartLevel2);
     }
 
     private void OnDisable()
@@ -142,5 +156,6 @@ public class DialogUI : MonoBehaviour
         UniEvent.RemoveListener<EventDefine.EventStartDialogOver>(OverStartDialog);
         UniEvent.RemoveListener<EventDefine.EventDuYanCome>(DuYanCome);
         UniEvent.RemoveListener<EventDefine.EventActorBack>(ActorBack);
+        UniEvent.RemoveListener<EventDefine.EventStartLevel2>(StartLevel2);
     }
 }
