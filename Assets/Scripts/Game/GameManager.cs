@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UniEvent.AddListener<EventDefine.EventGameStart>(OnEventGameStart);
-        GameStart();
+        // GameStart();
     }
 
     private void OnEventGameStart(IEventMessage message)
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void GameStart()
     {
-        var level = PlayerPrefs.GetInt("Level", 1);
+        var level = PlayerPrefs.GetInt("Level", 2);
 
         if (level >= 0 && level < GameDefine.MaxLevel)
         {
