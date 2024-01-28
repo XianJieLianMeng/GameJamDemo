@@ -51,7 +51,12 @@ namespace Game
                 {
                     //开始游戏
                     EventDefine.EventStartDialogOver.SendMessage();
-                    EventDefine.EventActorBack.SendMessage();
+                    // EventDefine.EventActorBack.SendMessage();
+                }
+
+                if (DuYanCorrectDialogIndex == 4)
+                {
+                    CurrentActor = Actor.Snake;
                 }
                 DuYanCorrectDialogIndex++;
             }

@@ -68,6 +68,14 @@ public class EventDefine
             UniEvent.SendMessage(new EventActorBack());
         }
     }
+    
+    public class EventStartLevel2 : IEventMessage
+    {
+        public static void SendMessage()
+        {
+            UniEvent.SendMessage(new EventStartLevel2());
+        }
+    }
 
     public class EventGameStartLevel : IEventMessage
     {

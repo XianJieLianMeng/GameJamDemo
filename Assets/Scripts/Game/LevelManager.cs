@@ -40,7 +40,7 @@ public class LevelManager :Singleton<LevelManager>
 
         if (mapData.IsPasswordCorrect(endMapData))
         {
-            Debug.LogError("GameOver");
+            Debug.Log($"完成了{PlayerPrefs.GetInt("Level")}关");
             PassLevel();
             EventDefine.EventMonsterLaugh.SendMessage();
         }
@@ -53,6 +53,11 @@ public class LevelManager :Singleton<LevelManager>
         {
             Debug.Log("恭喜你已经通关了！关卡已重置");
             level = 0;
+        }
+
+        if (level == 1)
+        {
+            EventDefine.EventStartLevel2.SendMessage();
         }
         PlayerPrefs.SetInt("Level", level);
     }
