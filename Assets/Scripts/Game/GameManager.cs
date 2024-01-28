@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
         EventDefine.EventGameStartLevel.SendMessage(level);
         chessboard.Init();
         timer = Timer.Register(20f, () => { EventDefine.EventMonsterCry.SendMessage(); }, OnUpdate, true);
-        AudioManager.Instance.PlayBackgroundMusic();
     }
 
     private int bloodCount = 5;

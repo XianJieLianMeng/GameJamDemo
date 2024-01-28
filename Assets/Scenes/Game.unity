@@ -3781,8 +3781,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundMusicSource: {fileID: 86053566}
   soundEffectSource: {fileID: 865278042}
-  audioClips:
+  bgAudioClips:
   - {fileID: 8300000, guid: 1be36ff4ce8985d439ae92d26d7d27b9, type: 3}
+  - {fileID: 8300000, guid: 7afaed7c60c08004cb4677308e340f23, type: 3}
 --- !u!1 &2065733523
 GameObject:
   m_ObjectHideFlags: 0
