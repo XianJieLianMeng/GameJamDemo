@@ -18,14 +18,19 @@ public class DialogUI : MonoBehaviour
     public Text content;
     public Text errorContent;
     public Image headSculpture;
+
+    private Sprite dog;
+    private Sprite duyan;
+    private Sprite sadan;
+    private Sprite self;
     void Start()
     {
         content.text = DialogManager.GetSnakeCurrentDialog();
         continueBtn.onClick.AddListener(OnContinueBtnClick);
-        Resources.Load<Sprite>("Sprites/三头犬");
-        Resources.Load<Sprite>("Sprites/大眼");
-        Resources.Load<Sprite>("Sprites/撒旦");
-        Resources.Load<Sprite>("Sprites/玩家");
+        dog = Resources.Load<Sprite>("Sprites/三头犬");
+        duyan = Resources.Load<Sprite>("Sprites/大眼");
+        sadan = Resources.Load<Sprite>("Sprites/撒旦");
+        self = Resources.Load<Sprite>("Sprites/玩家");
     }
 
     private void OnContinueBtnClick()
@@ -33,9 +38,11 @@ public class DialogUI : MonoBehaviour
         switch (DialogManager.CurrentActor)
         {
             case Actor.Snake:
+                headSculpture.sprite = self;
                 content.text = DialogManager.GetSnakeCurrentDialog();
                 break;
             case Actor.DuYan:
+                headSculpture.sprite = duyan;
                 if (DialogManager.DuYanIsSuccess)
                 {
                     content.text = DialogManager.GetDuYanCorrectCurrentDialog();
@@ -46,6 +53,7 @@ public class DialogUI : MonoBehaviour
                 }
                 break;
             case Actor.Dog:
+                headSculpture.sprite = dog;
                 if (DialogManager.DuYanIsSuccess)
                 {
                     content.text = DialogManager.GetDogCorrectCurrentDialog();
@@ -56,6 +64,7 @@ public class DialogUI : MonoBehaviour
                 }
                 break;
             case Actor.SaDan:
+                headSculpture.sprite = sadan;
                 if (DialogManager.DuYanIsSuccess)
                 {
                     content.text = DialogManager.GetSaDanCorrectCurrentDialog();
@@ -66,7 +75,7 @@ public class DialogUI : MonoBehaviour
                 }
                 break;
             case Actor.Self:
-                
+                headSculpture.sprite = self;
                 break;
         }
     }
@@ -75,6 +84,7 @@ public class DialogUI : MonoBehaviour
     {
         dialogBox.SetActive(false);
         continueBtn.gameObject.SetActive(false);
+        EventDefine.EventGameStart.SendMessage();
         var first = new Vector3(-54f,0,0);
         right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
         {
