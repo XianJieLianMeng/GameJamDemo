@@ -34,11 +34,11 @@ public class BoardBgUI : MonoBehaviour
         {
             if(level == i)
             {
-                bgList[level].SetActive(true);
+                bgList[i].SetActive(true);
             }
             else
             {
-                bgList[level].SetActive(false);
+                bgList[i].SetActive(false);
             }
         }
        
