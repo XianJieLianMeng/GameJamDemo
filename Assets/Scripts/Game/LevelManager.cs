@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UniFramework.Event;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -55,6 +56,7 @@ public class LevelManager :Singleton<LevelManager>
             Debug.Log("恭喜你已经通关了！关卡已重置");
             level = 0;
             PlayerPrefs.SetInt("Level", level);
+            DialogManager.Reset();
             SceneManager.LoadScene("Menu");
         }
 

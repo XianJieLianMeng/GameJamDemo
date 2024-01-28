@@ -116,5 +116,20 @@ namespace Game
             }
             return s;
         }
+
+        public static void Reset()
+        {
+        DuYanIsSuccess = true;
+        DogIsSuccess = true;
+        SaDanIsSuccess = true;
+        CurrentActor = Actor.Snake;
+        SnakeDialogIndex = 0;
+        DuYanCorrectDialogIndex = 0;
+        DuYanErrorDialogIndex = 0;
+        DogCorrectDialogIndex = 0;
+        DogErrorDialogIndex = 0;
+        SaDanCorrectDialogIndex = 0;
+        SaDanErrorDialogIndex = 0;
+        }
     }
 }
