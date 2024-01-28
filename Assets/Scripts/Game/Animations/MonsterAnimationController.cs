@@ -41,5 +41,6 @@ public class MonsterAnimationController :MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         animator.SetTrigger("laugh");
+        AudioManager.Instance.PlaySoundEffect(0);
     }
 }

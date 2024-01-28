@@ -13,7 +13,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
     [SerializeField]
     private List<AudioClip> bgAudioClips = new List<AudioClip>();
-
+    [SerializeField]
+    private List<AudioClip> audioClips = new List<AudioClip>();
 
     private void Start()
     {
@@ -77,5 +78,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public void PlaySoundEffect(AudioClip soundEffectClip)
     {
         soundEffectSource.PlayOneShot(soundEffectClip);
+    }
+
+    public void PlaySoundEffect(int index)
+    {
+        soundEffectSource.PlayOneShot(audioClips[index]);
     }
 }
