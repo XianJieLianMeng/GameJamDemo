@@ -14,7 +14,11 @@ namespace Game
     
     public class DialogManager
     {
-        public Actor CurrentActor = Actor.Snake;
+        public static bool DuYanIsSuccess = true;
+        public static bool DogIsSuccess = true;
+        public static bool SaDanIsSuccess = true;
+        
+        public static Actor CurrentActor = Actor.Snake;
         
         public static int SnakeDialogIndex = 0;
         public static int DuYanCorrectDialogIndex = 0;
