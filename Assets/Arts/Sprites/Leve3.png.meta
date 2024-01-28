@@ -1,0 +1,976 @@
+fileFormatVersion: 2
+guid: 15a59715d6cb1734ebdc6f7abc8be3ca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leve3_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4e78f511b2f8f4eb9fff506296c39d
+      internalID: -19346967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2854921eb2b0c4a934ad321c87a5b0
+      internalID: 619841434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87cabb24943aa7049a25387aa506691f
+      internalID: -318677762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9611aad66d604bc408370733883d5100
+      internalID: -246931981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_4
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d8f5f843511244381841108eec4e33
+      internalID: -971060092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_5
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 710.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98cafc3792c1ec42ac1974b8a9e97fd
+      internalID: 129647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf05892e72716b49bcf2ea95652d698
+      internalID: 1982099683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9adfaac1aa63e6468dc43e9bd614d42
+      internalID: -1466755525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_8
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b144063a18365da49b012d15a1cd649b
+      internalID: -2018335767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5898e7e9df9214dabcb8362f5d6f8a
+      internalID: -401623710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_10
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75387b1014d3144897c85e004d752ac
+      internalID: -2091726977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_11
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81cae2c48e725d41b3071021307cd24
+      internalID: -1690132695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_12
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 568.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c704f260f8fae458125d929dce6a0a
+      internalID: 678839231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0da72e7f6dde64b9036e69352fb93f
+      internalID: -345096097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396ae2bb9511d1343a72584f378a0b9a
+      internalID: -491405566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_15
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdaa4f9f54cbaec48b270a62521704a1
+      internalID: 1527095596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_16
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5d9a5d6d9aeae47b4cdcaa95f55113
+      internalID: -2050546736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_17
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405a8a37f31bae340b704c9ef0e123eb
+      internalID: -94998980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_18
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 426.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9816d11f706958344bf011d5cbd6f300
+      internalID: 782936794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_19
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73971a9ba335a141bec4d4601fd3a74
+      internalID: -969178975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_20
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63df98dbbd92dd14e8b5682d9dc9e648
+      internalID: 133597754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_21
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9b21c24d8acdf42ae2f1b304ef316a
+      internalID: 105361144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_22
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94079d64fc5c274eab35118bc94dbd8
+      internalID: 1689569114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_23
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f24e779d3314a41b6703e196de0aa7
+      internalID: 100664534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_24
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 284.8333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3444e15dace1424ab26c93ca585c7e9
+      internalID: -1900513654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7e37dea5246f141bbec244982945d2
+      internalID: 213811353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_26
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a95debf2fb80894e9340ee703a41275
+      internalID: 1438117971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_27
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79127e87ed49b2843b8aef1243d64016
+      internalID: 2058454382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_28
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8ef3907b561c547bc30ea8a52b7ed4
+      internalID: -814542469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_29
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd646f5e2b6e0ef4e9e7b5f2a73b582b
+      internalID: 1088094097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_30
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63aea7066dd854f419082702d2408ea4
+      internalID: 1134555560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_31
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 142.83333
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce3bccc132be8d468a064c6a50dc1fd
+      internalID: 233957505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a59ace5eddbc40469d4a9124c6a106e
+      internalID: 45441770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_33
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0de270202456c5429bca90e3b642412
+      internalID: -1996724594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_34
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c4b89f9f929564c8e896b42a8293ba
+      internalID: -2113763138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_35
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b212d67105f2a042873725eb424128a
+      internalID: 1444923362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_36
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f5a59c6b440144592267357af8500b
+      internalID: 1177620497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leve3_37
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 0.83332825
+        width: 142.14285
+        height: 142.16667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2320d3747a6504c916f6373f8b74fe
+      internalID: 1363390101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Leve3_0: -19346967
+      Leve3_1: 619841434
+      Leve3_10: -2091726977
+      Leve3_11: -1690132695
+      Leve3_12: 678839231
+      Leve3_13: -345096097
+      Leve3_14: -491405566
+      Leve3_15: 1527095596
+      Leve3_16: -2050546736
+      Leve3_17: -94998980
+      Leve3_18: 782936794
+      Leve3_19: -969178975
+      Leve3_2: -318677762
+      Leve3_20: 133597754
+      Leve3_21: 105361144
+      Leve3_22: 1689569114
+      Leve3_23: 100664534
+      Leve3_24: -1900513654
+      Leve3_25: 213811353
+      Leve3_26: 1438117971
+      Leve3_27: 2058454382
+      Leve3_28: -814542469
+      Leve3_29: 1088094097
+      Leve3_3: -246931981
+      Leve3_30: 1134555560
+      Leve3_31: 233957505
+      Leve3_32: 45441770
+      Leve3_33: -1996724594
+      Leve3_34: -2113763138
+      Leve3_35: 1444923362
+      Leve3_36: 1177620497
+      Leve3_37: 1363390101
+      Leve3_4: -971060092
+      Leve3_5: 129647
+      Leve3_6: 1982099683
+      Leve3_7: -1466755525
+      Leve3_8: -2018335767
+      Leve3_9: -401623710
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

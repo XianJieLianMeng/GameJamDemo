@@ -1,29 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using Define;
 using DG.Tweening;
+using Game;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogUI : MonoBehaviour
 {
     public Transform right;
-    public GameObject monster;
-    public Button overBtn;
+    public GameObject left;
+    public Button continueBtn;
     public GameObject chessboard;
+    public Text content;
+    public Image headSculpture;
     void Start()
     {
-        overBtn.onClick.AddListener(OverBtnClick);
+        content.text = DialogManager.GetSnakeCurrentDialog();
+        continueBtn.onClick.AddListener(OnContinueBtnClick);
     }
 
-    // Update is called once per frame
-    private void OverBtnClick()
+    private void OnContinueBtnClick()
+    {
+        content.text = DialogManager.GetSnakeCurrentDialog();
+    }
+    
+    private void OverLeve1Dialog()
     {
         var first = new Vector3(-54f,0,0);
         right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
         {
             right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
             {
-                monster.SetActive(true);
+                left.SetActive(true);
                 EventDefine.EventPlateMove.SendMessage();
                 chessboard.SetActive(true);
             });
