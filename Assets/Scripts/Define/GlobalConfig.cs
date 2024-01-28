@@ -45,13 +45,11 @@ namespace Define
             "汪！我们尊贵的主人，地狱里的王，恶魔里的最强，显赫的首领，",
             "将来找你治病。",
             "如果你治不好，（想做出凶狠的表情但因笑声失败），我们就，把你咬碎！",
-            "",
         };
         public static string[] DogErrorDialog = new[]
         {
             "我们的头怎么撞一块了？！",
             "呜呜，嗷呜。（泪眼汪汪地看着你想等待摸摸）",
-            "",
         };
         
         public static string[] SaDanCorrectDialog = new[]

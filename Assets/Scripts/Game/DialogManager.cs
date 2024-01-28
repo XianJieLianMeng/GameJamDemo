@@ -3,8 +3,19 @@ using UnityEngine;
 
 namespace Game
 {
+    public enum Actor
+    {
+        Snake,  //蛇
+        DuYan,  //独眼
+        Dog,    //狗
+        SaDan,  //撒旦
+        Self,   //玩家
+    }
+    
     public class DialogManager
     {
+        public Actor CurrentActor = Actor.Snake;
+        
         public static int SnakeDialogIndex = 0;
         public static int DuYanCorrectDialogIndex = 0;
         public static int DuYanErrorDialogIndex = 0;
@@ -25,37 +36,55 @@ namespace Game
         public static string GetDuYanCorrectCurrentDialog()
         {
             var s = GlobalConfig.DuYanCorrectDialog[DuYanCorrectDialogIndex];
-            DuYanCorrectDialogIndex++;
+            if (DuYanCorrectDialogIndex < GlobalConfig.DuYanCorrectDialog.Length -1)
+            {
+                DuYanCorrectDialogIndex++;
+            }
             return s;
         }
         public static string GetDuYanErrorCurrentDialog()
         {
             var s = GlobalConfig.DuYanErrorDialog[DuYanErrorDialogIndex];
-            DuYanErrorDialogIndex++;
+            if (DuYanErrorDialogIndex < GlobalConfig.DuYanErrorDialog.Length -1)
+            {
+                DuYanErrorDialogIndex++;
+            }
             return s;
         }
         public static string GetDogCorrectCurrentDialog()
         {
             var s = GlobalConfig.DogCorrectDialog[DogCorrectDialogIndex];
-            DogCorrectDialogIndex++;
+            if (DogCorrectDialogIndex < GlobalConfig.DogCorrectDialog.Length -1)
+            {
+                DogCorrectDialogIndex++;
+            }
             return s;
         }
         public static string GetDogErrorCurrentDialog()
         {
             var s = GlobalConfig.DogErrorDialog[DogErrorDialogIndex];
-            DogErrorDialogIndex++;
+            if (DogErrorDialogIndex < GlobalConfig.DogErrorDialog.Length -1)
+            {
+                DogErrorDialogIndex++;
+            }
             return s;
         }
         public static string GetSaDanCorrectCurrentDialog()
         {
             var s = GlobalConfig.SaDanCorrectDialog[SaDanCorrectDialogIndex];
-            SaDanCorrectDialogIndex++;
+            if (SaDanCorrectDialogIndex < GlobalConfig.SaDanCorrectDialog.Length -1)
+            {
+                SaDanCorrectDialogIndex++;
+            }
             return s;
         }
         public static string GetSaDanErrorCurrentDialog()
         {
             var s = GlobalConfig.SaDanErrorDialog[SaDanErrorDialogIndex];
-            SaDanErrorDialogIndex++;
+            if (SaDanErrorDialogIndex < GlobalConfig.SaDanErrorDialog.Length -1)
+            {
+                SaDanErrorDialogIndex++;
+            }
             return s;
         }
     }

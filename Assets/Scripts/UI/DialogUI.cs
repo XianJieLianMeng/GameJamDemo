@@ -23,9 +23,13 @@ public class DialogUI : MonoBehaviour
     private void OnContinueBtnClick()
     {
         content.text = DialogManager.GetSnakeCurrentDialog();
+        if (DialogManager.SnakeDialogIndex == 6)
+        {
+            //todo 大眼怪走来
+        }
     }
     
-    private void OverLeve1Dialog()
+    private void OverStartDialog()
     {
         var first = new Vector3(-54f,0,0);
         right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
