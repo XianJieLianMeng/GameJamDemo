@@ -52,4 +52,14 @@ public class EventDefine
             UniEvent.SendMessage(new EventStartDialogOver());
         }
     }
+
+    public class EventBloodUpdate : IEventMessage
+    {
+        public int Count;
+
+        public static void SendMessage(int count)
+        {
+            UniEvent.SendMessage(new EventBloodUpdate() { Count = count});
+        }
+    }
 }
