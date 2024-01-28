@@ -45,6 +45,15 @@ public class EventDefine
         }
     }
 
+    public class EventGameStartLevel : IEventMessage
+    {
+        public int Level;
+        public static void SendMessage(int level)
+        {
+            UniEvent.SendMessage(new EventGameStartLevel() { Level = level});
+        }
+    }
+
     public class EventBloodUpdate : IEventMessage
     {
         public int Count;
