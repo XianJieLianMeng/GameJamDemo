@@ -11,6 +11,7 @@ public class NPCUI : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("1");
         UniEvent.AddListener<EventDefine.EventGameStartLevel>(OnEventGameStartLevel);
     }
 
@@ -23,17 +24,19 @@ public class NPCUI : MonoBehaviour
     {
         if (message is EventGameStartLevel startLevelMsg)
         {
-            ChangeBg(startLevelMsg.Level);
+            Debug.Log($"ChangeNpc level = {startLevelMsg.Level}");
+            ChangeNpc(startLevelMsg.Level);
         }
     }
 
-    private void ChangeBg(int level)
+    private void ChangeNpc(int level)
     {
         for (int i = 0; i < npcList.Count; i++)
         {
             if (level == i)
             {
                 npcList[level].SetActive(true);
+                Debug.Log($"ChangeNPC {npcList[level].gameObject.name}");
             }
             else
             {

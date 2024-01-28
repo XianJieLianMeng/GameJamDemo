@@ -36,6 +36,7 @@ public class DialogUI : MonoBehaviour
         duyan = Resources.Load<Sprite>("Sprites/大眼");
         sadan = Resources.Load<Sprite>("Sprites/撒旦");
         self = Resources.Load<Sprite>("Sprites/玩家");
+        left.SetActive(false);
     }
 
     private void OnContinueBtnClick()
@@ -119,6 +120,7 @@ public class DialogUI : MonoBehaviour
             {
                 right.DOLocalMove(Vector3.zero, 0.1f).SetEase(Ease.InCirc).OnComplete(() =>
                 {
+                    //todo 派发左侧显示事件
                     left.SetActive(true);
                     EventDefine.EventPlateMove.SendMessage();
                     chessboard.SetActive(true);
@@ -132,13 +134,13 @@ public class DialogUI : MonoBehaviour
     {
         UniEvent.AddListener<EventDefine.EventStartDialogOver>(OverStartDialog);
         UniEvent.AddListener<EventDefine.EventDuYanCome>(DuYanCome);
-        UniEvent.AddListener<EventDefine.EventDuYanCome>(ActorBack);
+        UniEvent.AddListener<EventDefine.EventActorBack>(ActorBack);
     }
 
     private void OnDisable()
     {
         UniEvent.RemoveListener<EventDefine.EventStartDialogOver>(OverStartDialog);
         UniEvent.RemoveListener<EventDefine.EventDuYanCome>(DuYanCome);
-        UniEvent.RemoveListener<EventDefine.EventDuYanCome>(ActorBack);
+        UniEvent.RemoveListener<EventDefine.EventActorBack>(ActorBack);
     }
 }
