@@ -86,11 +86,15 @@ public class DialogUI : MonoBehaviour
         }
     }
 
-    private void DuYanCome(IEventMessage message)
+    private void ActorCome(IEventMessage message)
     {
-        if (message is EventDefine.EventDuYanCome msg)
+        if (message is EventDefine.EventActorCome msg)
         {
             var vector3 = new Vector3(336f,37,0);
+            var level = PlayerPrefs.GetInt("Level");
+            duyanActor.SetActive(level == 0);
+            dogActor.SetActive(level == 1);
+            sadanActor.SetActive(level == 2);
             actor.transform.DOLocalMove(vector3, 1f);
         }
     }
@@ -99,18 +103,10 @@ public class DialogUI : MonoBehaviour
     {
         if (message is EventDefine.EventActorBack msg)
         {
+            actor.SetActive(true);
             var vector3 = new Vector3(2269f,164,0);
-            var center = new Vector3(336f,37,0);
-            actor.transform.DOLocalMove(vector3, 1f).OnComplete((() =>
-            {
-                var level = PlayerPrefs.GetInt("Level");
-                dogActor.SetActive(level == 0);
-                duyanActor.SetActive(level == 1);
-                sadanActor.SetActive(level == 2);
-                actor.transform.DOLocalMove(center, 1f);
-            }));
+            actor.transform.DOLocalMove(vector3, 1f);
         }
-        
     }
     
     private void OverStartDialog(IEventMessage message)
@@ -118,7 +114,6 @@ public class DialogUI : MonoBehaviour
         if (message is EventDefine.EventStartDialogOver msg)
         {
             gameObject.SetActive(false);
-            continueBtn.gameObject.SetActive(false);
             EventDefine.EventGameStart.SendMessage();
             var first = new Vector3(-54f,0,0);
             right.DOLocalMove(first, 2.5f).SetEase(Ease.InCubic).OnComplete(() =>
@@ -138,23 +133,28 @@ public class DialogUI : MonoBehaviour
     {
         if (message is EventDefine.EventStartLevel2 msg)
         {
-            continueBtn.gameObject.SetActive(true);
             OnContinueBtnClick();
+            chessboard.SetActive(false);
+            right.DOLocalMove(new Vector3(3882,0,0),2.5f).OnComplete((() =>
+            {
+                left.SetActive(false);
+                gameObject.SetActive(true);
+            }));
         }
     }
 
     private void OnEnable()
     {
         UniEvent.AddListener<EventDefine.EventStartDialogOver>(OverStartDialog);
-        UniEvent.AddListener<EventDefine.EventDuYanCome>(DuYanCome);
+        UniEvent.AddListener<EventDefine.EventActorCome>(ActorCome);
         UniEvent.AddListener<EventDefine.EventActorBack>(ActorBack);
         UniEvent.AddListener<EventDefine.EventStartLevel2>(StartLevel2);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         UniEvent.RemoveListener<EventDefine.EventStartDialogOver>(OverStartDialog);
-        UniEvent.RemoveListener<EventDefine.EventDuYanCome>(DuYanCome);
+        UniEvent.RemoveListener<EventDefine.EventActorCome>(ActorCome);
         UniEvent.RemoveListener<EventDefine.EventActorBack>(ActorBack);
         UniEvent.RemoveListener<EventDefine.EventStartLevel2>(StartLevel2);
     }
