@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameMenuUI : MonoBehaviour
 {
     public Button startGameBtn;
+    public GameObject loadingView;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class GameMenuUI : MonoBehaviour
     private void StartGameBtnClick()
     {
         Debug.Log("开始游戏");
-        SceneManager.LoadScene("Game");
+        loadingView.SetActive(true);
     }
 
     private void GoOnGameBtnClick()
@@ -27,7 +28,7 @@ public class GameMenuUI : MonoBehaviour
         {
             Debug.Log("游戏无存档，是否开启新游戏~");
         }
-        SceneManager.LoadScene("Game");
+        loadingView.SetActive(true);
     }
     
     private void OperationBtnClick()
